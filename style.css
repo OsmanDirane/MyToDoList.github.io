@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,800");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #dcdcc6;
+}
+
+.list {
+  position: relative;
+  background: #fff;
+  width: 350px;
+}
+.list:hover {
+  box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.7);
+}
+
+.list h2 {
+  background: #03a9f4;
+  font-weight: bold;
+  color: #fff;
+  padding: 10px 20px;
+  text-align: center;
+}
+.list ul {
+  position: relative;
+  padding: 30px;
+}
+
+.list ul li {
+  position: relative;
+  list-style: none;
+  padding: 15px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.list ul :last-child {
+  border-bottom: none;
+}
+.list ul li label {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.list ul label input {
+  visibility: none;
+  appearance: none;
+}
+
+.list ul label p {
+  position: absolute;
+}
+
+.list ul label span {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.list ul label span::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  width: 10px;
+  height: 5px;
+  border-left: 2px solid #ccc;
+  border-bottom: 2px solid #ccc;
+  transform: rotate(-40deg);
+}
+.list ul label input:checked ~ p {
+  text-decoration: line-through;
+  color: #ccc;
+}
+.list ul label input:checked ~ span {
+  background: #03a9f4;
+  border: 1px solid #03a9f4;
+}
+.list ul label input:checked ~ span::before {
+  border-left: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+}
+.btn {
+  text-align: center;
+}
+
+button {
+  border-radius: 50px;
+  background-color: #03a9f4;
+  color: #fff;
+  padding: 10px 20px;
+  margin-left: 60px;
+  margin-right: 18%;
+  margin-bottom: 15px;
+  transition: transform 80ms ease-in;
+  width: 50%;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+#myInput {
+  margin: 20px 80px;
+  border: 2px solid #03a9f4;
+  border-radius: 20px;
+  padding: 10px;
+  text-align: center;
+}
